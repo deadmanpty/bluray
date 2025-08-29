@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Author: Aniverse
-# https://github.com/Aniverse/bluray
+# https://github.com/deadmanpty/bluray
 #
 # --------------------------------------------------------------------------------
 #
@@ -54,7 +54,7 @@ RCLONEPATH="Replace:/here/with/your/remote/path"
 #
 usage() {
 bash <(wget -qO- https://git.io/bluray) -u
-bash <(curl -s https://raw.githubusercontent.com/Aniverse/bluray/master/bluray)
+bash <(curl -s https://raw.githubusercontent.com/deadmanpty/bluray/master/bluray)
 wget -qO /usr/local/bin/bluray https://git.io/bluray && chmod +x /usr/local/bin/bluray
 }
 # --------------------------------------------------------------------------------
@@ -188,7 +188,7 @@ function _install_ffmpeg_2(){
 
 # 有 root 权限的盒子安装 vcs
 function _install_vcs() {
-    wget --no-check-certificate -qO /usr/local/bin/vcs https://raw.githubusercontent.com/Aniverse/bluray/master/tools/vcs &&
+    wget --no-check-certificate -qO /usr/local/bin/vcs https://raw.githubusercontent.com/deadmanpty/bluray/master/tools/vcs &&
     chmod 755 /usr/local/bin/vcs
 }
 
@@ -209,11 +209,11 @@ function _install_bdinfo() {
     if [[ ! -f /etc/abox/app/BDinfoCli.0.7.3/BDInfo.exe ]]; then
         mkdir -p /etc/abox/app
         cd /etc/abox/app
-        svn co https://github.com/Aniverse/bluray/trunk/tools/BDinfoCli.0.7.3
+        svn co https://github.com/deadmanpty/bluray/tools/BDinfoCli.0.7.3
         mv -f BDinfoCli.0.7.3 BDinfoCli
     fi
     if [[ ! -f /etc/abox/app/bdinfocli.exe ]]; then
-        wget https://github.com/Aniverse/bluray/raw/master/tools/bdinfocli.exe -qO /etc/abox/app/bdinfocli.exe
+        wget https://github.com/deadmanpty/bluray/raw/master/tools/bdinfocli.exe -qO /etc/abox/app/bdinfocli.exe
     fi
 }
 
@@ -225,7 +225,7 @@ function _check_library() {
         echo -e "\n${bold}Git found, cloning library ...${normal}\n"
         cd "${DIR}" ; rm -rf bluray-2*
         [[ $DeBUG == 1 ]] && echo -e "\nDIR = ${DIR}\n" && ls
-        git clone --depth=1 https://github.com/Aniverse/bluray bluray-$BDVER
+        git clone --depth=1 https://github.com/deadmanpty/bluray bluray-$BDVER
         [[ ! $? -eq 0 ]] && echo "Failed to git clone repo ..."
         rm -rf bluray-$BDVER/{bluray,README.md}
         mv -f bluray-$BDVER/* .
@@ -235,7 +235,7 @@ function _check_library() {
         cd "${DIR}"
         [[ $DeBUG == 1 ]] && echo -e "\nDIR = ${DIR}\n" && ls
         BDVER=2.9.0
-        wget --no-check-certificate -O $BDVER.tar.gz https://github.com/Aniverse/bluray/archive/$BDVER.tar.gz
+        wget --no-check-certificate -O $BDVER.tar.gz https://github.com/deadmanpty/bluray/archive/$BDVER.tar.gz
         tar zxf $BDVER.tar.gz
         rm -rf bluray-$BDVER/{bluray,README.md}
         mv -f bluray-$BDVER/* .
