@@ -213,7 +213,7 @@ function _install_bdinfo() {
         mv -f BDinfoCli.0.7.3 BDinfoCli
     fi
     if [[ ! -f /etc/abox/app/bdinfocli.exe ]]; then
-        wget https://github.com/deadmanpty/bluray/raw/master/tools/BDinfoCli.0.7.3/bdinfocli.exe -qO /etc/abox/app/bdinfocli.exe
+        wget https://github.com/deadmanpty/bluray/raw/master/tools/bdinfocli.exe -qO /etc/abox/app/bdinfocli.exe
     fi
 }
 
