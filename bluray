@@ -53,7 +53,7 @@ RCLONEPATH="Replace:/here/with/your/remote/path"
 #
 #
 usage() {
-bash <(wget -qO- https://git.io/bluray) -u
+# bash <(wget -qO- https://git.io/bluray) -u
 bash <(curl -s https://raw.githubusercontent.com/deadmanpty/bluray/master/bluray)
 wget -qO /usr/local/bin/bluray https://git.io/bluray && chmod +x /usr/local/bin/bluray
 }
@@ -209,11 +209,11 @@ function _install_bdinfo() {
     if [[ ! -f /etc/abox/app/BDinfoCli.0.7.3/BDInfo.exe ]]; then
         mkdir -p /etc/abox/app
         cd /etc/abox/app
-        svn co https://github.com/deadmanpty/bluray/tools/BDinfoCli.0.7.3
+        svn co https://github.com/deadmanpty/bluray/raw/master/tools/BDinfoCli.0.7.3
         mv -f BDinfoCli.0.7.3 BDinfoCli
     fi
     if [[ ! -f /etc/abox/app/bdinfocli.exe ]]; then
-        wget https://github.com/deadmanpty/bluray/raw/master/tools/bdinfocli.exe -qO /etc/abox/app/bdinfocli.exe
+        wget https://github.com/deadmanpty/bluray/raw/master/tools/BDinfoCli.0.7.3/bdinfocli.exe -qO /etc/abox/app/bdinfocli.exe
     fi
 }
 
