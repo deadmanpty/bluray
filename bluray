@@ -53,9 +53,9 @@ RCLONEPATH="Replace:/here/with/your/remote/path"
 #
 #
 usage() {
-# bash <(wget -qO- https://git.io/bluray) -u
+bash <(wget -qO- https://github.com/deadmanpty/bluray) -u
 bash <(curl -s https://raw.githubusercontent.com/deadmanpty/bluray/master/bluray)
-wget -qO /usr/local/bin/bluray https://git.io/bluray && chmod +x /usr/local/bin/bluray
+wget -qO /usr/local/bin/bluray https://github.com/deadmanpty/bluray && chmod +x /usr/local/bin/bluray
 }
 # --------------------------------------------------------------------------------
 black=$(tput setaf 0); red=$(tput setaf 1); green=$(tput setaf 2); yellow=$(tput setaf 3);
