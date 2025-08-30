@@ -209,11 +209,11 @@ function _install_bdinfo() {
     if [[ ! -f /etc/abox/app/BDinfoCli.0.7.3/BDInfo.exe ]]; then
         mkdir -p /etc/abox/app
         cd /etc/abox/app
-        svn co https://github.com/Aniverse/bluray/trunk/tools/BDinfoCli.0.7.3
+        svn co https://github.com/deadmanpty/bluray/blob/master/tools/BDinfoCli.0.7.3
         mv -f BDinfoCli.0.7.3 BDinfoCli
     fi
     if [[ ! -f /etc/abox/app/bdinfocli.exe ]]; then
-        wget https://github.com/Aniverse/bluray/raw/master/tools/bdinfocli.exe -qO /etc/abox/app/bdinfocli.exe
+        wget https://github.com/deadmanpty/bluray/raw/master/tools/bdinfocli.exe -qO /etc/abox/app/bdinfocli.exe
     fi
 }
 
@@ -225,7 +225,7 @@ function _check_library() {
         echo -e "\n${bold}Git found, cloning library ...${normal}\n"
         cd "${DIR}" ; rm -rf bluray-2*
         [[ $DeBUG == 1 ]] && echo -e "\nDIR = ${DIR}\n" && ls
-        git clone --depth=1 https://github.com/Aniverse/bluray bluray-$BDVER
+        git clone --depth=1 https://github.com/deadmanpty/bluray bluray-$BDVER
         [[ ! $? -eq 0 ]] && echo "Failed to git clone repo ..."
         rm -rf bluray-$BDVER/{bluray,README.md}
         mv -f bluray-$BDVER/* .
