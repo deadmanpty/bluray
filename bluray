@@ -639,7 +639,7 @@ function _askresolution() {
     echo
 }
 
-function _response_jietu() { echo -e "${jiacu}The script will take 10 screenshots in ${green}$fenbianlv${normal}" ; }
+function _response_jietu() { echo -e "${jiacu}The script will take 12 screenshots in ${green}$fenbianlv${normal}" ; }
 
 
 
