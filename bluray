@@ -897,7 +897,7 @@ function _takescreenshots() {
     [[ $resolution == 1080p ]] && fenbianlv=1920x1080
     [[ $resolution == 2160p ]] && fenbianlv=3840x2160
 
-    for c in {01..10} ; do
+    for c in {01..12} ; do
 
         i=`expr $i + $timestampsetting`
         timestamp=`date -u -d @$i +%H:%M:%S`
