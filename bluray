@@ -622,11 +622,11 @@ function _askresolution() {
     fi
 
     if   [[ $resolution == 1080p ]]; then
-        echo -e "${bold}The script will take 10 screenshots in ${green}1920×1080${normal}"
+        echo -e "${bold}The script will take 12 screenshots in ${green}1920×1080${normal}"
     elif [[ $resolution == 2160p ]]; then
-        echo -e "${bold}The script will take 10 screenshots in ${green}3840x2160${normal}"
+        echo -e "${bold}The script will take 12 screenshots in ${green}3840x2160${normal}"
     elif [[ $resolution == auto ]]; then
-        echo -e "${bold}The script will take 10 screenshots in ${green}original${jiacu} resolution${normal}"
+        echo -e "${bold}The script will take 12 screenshots in ${green}original${jiacu} resolution${normal}"
     elif [[ $resolution == input ]]; then
         echo ; read -e -p "Input the screenshots' resolution you want: ${green}" -i $VideoResolution fenbianlv
         echo ; _response_jietu
